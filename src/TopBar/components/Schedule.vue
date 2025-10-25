@@ -338,10 +338,11 @@ export let current = null;
 .currentClass::before {
   content: attr(data-text);
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   right: 0;
-  transform: translateY(-50%);
+  height: 100%;
+  line-height: 2rem;
   color: rgb(var(--mdui-color-on-surface-variant));
   font-size: 1rem;
   font-weight: 500;
@@ -355,10 +356,11 @@ export let current = null;
 .currentClass::after {
   content: attr(data-text);
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   right: 0;
-  transform: translateY(-50%);
+  height: 100%;
+  line-height: 2rem;
   color: rgb(var(--mdui-color-on-primary));
   font-size: 1rem;
   font-weight: 500;
@@ -393,7 +395,12 @@ export let current = null;
     height: 1.8rem;
   }
 
+  .currentClass::before {
+    line-height: 1.8rem;
+  }
+
   .currentClass::after {
+    line-height: 1.8rem;
     font-size: 0.9rem;
   }
 }
